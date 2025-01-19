@@ -4,8 +4,7 @@ import { Capacitor, Inductor, Resistor } from '../icons'
 import { getUnit } from '../utils';
 import { Handle, Position } from '@xyflow/react';
 
-export default function ElectricalComponent({data}) {
-    const {value,type} = data
+export default function ElectricalComponent({data : {value,type}}) {
     const unit = getUnit(type);
   return (
     <Box sx={{position:'relative'}}>
@@ -16,7 +15,7 @@ export default function ElectricalComponent({data}) {
             {value} {unit}
         </div>
         <Handle type='source' position={Position.Right} id="right"/>
-        <Handle type='source' position={Position.Left} id="right"/>
+        <Handle type='source' position={Position.Left} id="left"/>
     </Box>
   )
 }
