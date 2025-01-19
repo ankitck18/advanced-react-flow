@@ -3,6 +3,7 @@ import React from 'react'
 import { Capacitor, Inductor, Resistor } from '../icons'
 import { getUnit } from '../utils';
 import { Handle, Position } from '@xyflow/react';
+import Terminal from './Terminal';
 
 export default function ElectricalComponent({data : {value,type}}) {
     const unit = getUnit(type);
@@ -14,8 +15,8 @@ export default function ElectricalComponent({data : {value,type}}) {
         <div className='text-xs absolute'>
             {value} {unit}
         </div>
-        <Handle type='source' position={Position.Right} id="right"/>
-        <Handle type='source' position={Position.Left} id="left"/>
+        <Terminal type='source' position={Position.Right} id="right"/>
+        <Terminal type='source' position={Position.Left} id="left"/>
     </Box>
   )
 }

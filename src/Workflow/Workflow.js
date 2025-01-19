@@ -7,6 +7,7 @@ import { COMPONENTS,initialNodes,initialEdges } from '../constants';
 import { Box } from '@mui/material';
 import ElectricalComponent from '../Components/ElectricalComponent';
 import Wire from '../Components/Wire';
+import ConnectionLine from '../Components/ConnectionLine';
 
 
 const nodeTypes ={
@@ -44,7 +45,8 @@ export const Workflow = () => {
         connectionMode={ConnectionMode.Loose}
         nodeTypes={nodeTypes}
         edgeTypes={edgeTypes}
-        onConnect={onConnect}>
+        onConnect={onConnect}
+        connectionLineComponent={ConnectionLine}>
         <Background variant={BackgroundVariant.Lines} gap={10} color="#f1f1f1" id="1"/>
         <Background variant={BackgroundVariant.Lines} gap={100} color="#ccc" id="2"/>
         <Controls />
