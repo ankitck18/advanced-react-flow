@@ -15,23 +15,23 @@ export function isPointInBox(point, box) {
 export function getUnit(type) {
   let unit;
   switch (type) {
-    case ElectricalComponentType.Resistor: {
+    case "Resistor": {
       unit = "kΩ";
       break;
     }
-    case ElectricalComponentType.Inductor: {
+    case "Inductor": {
       unit = "H";
       break;
     }
-    case ElectricalComponentType.Capacitor: {
+    case "Capacitor": {
       unit = "μF";
       break;
     }
-    case ElectricalComponentType.Battery: {
+    case "Battery": {
       unit = "V";
       break;
     }
-    case ElectricalComponentType.Bulb: {
+    case "Bulb": {
       unit = "W";
       break;
     }

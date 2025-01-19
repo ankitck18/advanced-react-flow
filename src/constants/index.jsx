@@ -5,7 +5,27 @@ import { Battery,Resistor, Capacitor,Inductor,Bulb} from "../icons";
 
 export const initialEdges = [];
 
-export const initialNodes = [];
+export const initialNodes = [
+  {
+    id: "1",
+    position: { x: 100, y: 100 },
+    type: "electricalComponent",
+    data: { type: "Resistor", value: 3 },
+  },
+  {
+    id: "2",
+    position: { x: 200, y: 200 },
+    type: "electricalComponent",
+    data: { type: "Capacitor", value: 3 },
+  },
+  {
+    id: "3",
+    position: { x: 300, y: 300 },
+    type: "electricalComponent",
+    data: { type: "Inductor", value: 3 },
+  },
+];
+
 
 export const COMPONENTS = [
   {
